@@ -1,41 +1,33 @@
-//
-// Created by oudream on 2018/9/20.
-//
-
 #include "global.h"
 
 using namespace std;
 
-/**
- * haoel
- * @param numbers
- * @param target
- * @return
- */
-vector<int> twoSum(vector<int> &numbers, int target) {
-    map<int, int> m;
-    vector<int> result;
-    for(int i=0; i<numbers.size(); i++){
-        // not found the second one
-        if (m.find(numbers[i])==m.end() ) {
-            // store the first one poisition into the second one's key
-            m[target - numbers[i]] = i;
-        }else {
-            // found the second one
-            result.push_back(m[numbers[i]]+1);
-            result.push_back(i+1);
-            break;
+class SolutionHaoel {
+public:
+    vector<int> twoSum(vector<int> &numbers, int target)
+    {
+        map<int, int> m;
+        vector<int> result;
+        for (int i = 0; i < numbers.size(); i++)
+        {
+            // not found the second one
+            if (m.find(numbers[i]) == m.end())
+            {
+                // store the first one poisition into the second one's key
+                m[target - numbers[i]] = i;
+            }
+            else
+            {
+                // found the second one
+                result.push_back(m[numbers[i]] + 1);
+                result.push_back(i + 1);
+                break;
+            }
         }
+        return result;
     }
-    return result;
-}
+};
 
-/**
- * oudream
- * @param numbers
- * @param target
- * @return
- */
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -67,13 +59,18 @@ int test_twoSum1(int argc, const char * argv[])
 {
     int nums[] = {2, 7, 11, 15};
     int target = 9;
+
+    // haoel
+    SolutionHaoel solutionHaoel;
     vector<int> nums2 (nums, nums + sizeof(nums) / sizeof(int) );
-    vector<int> r = twoSum(nums2, target);
+    vector<int> r = solutionHaoel.twoSum(nums2, target);
     fn_print(fn_format("haoel.twoSum.return.size=%d, items:", r.size()));
     for (int i = 0; i < r.size(); ++i)
     {
         fn_print(fn_format("%d", r[i]));
     }
+
+    // oudream
     Solution solution;
     vector<int> r2 = solution.twoSum(nums2, target);
     fn_print(fn_format("oudream.twoSum.return.size=%d, items:", r2.size()));
@@ -90,7 +87,8 @@ int test_twoSum2(int argc, const char * argv[])
     int nums[] = {20, 1 , 11, 12, 15, 45, 63, 3, 32, 23};
     int target = 34;
     vector<int> nums2 (nums, nums + sizeof(nums) / sizeof(int) );
-    vector<int> r = twoSum(nums2, target);
+    SolutionHaoel solutionHaoel;
+    vector<int> r = solutionHaoel.twoSum(nums2, target);
     fn_print(fn_format("haoel.twoSum.return.size=%d, items:", r.size()));
     for (int i = 0; i < r.size(); ++i)
     {

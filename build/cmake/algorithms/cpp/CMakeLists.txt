@@ -7,7 +7,8 @@ set(gsl_alglorithms_heads
 set(gsl_alglorithms_sources
         global.cpp
         main.cpp
-        two_sum1.cpp
+        1.two_sum.cpp
+        2.add_two_numbers.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
