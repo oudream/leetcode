@@ -9,6 +9,7 @@ set(gsl_alglorithms_sources
         main.cpp
         1.two_sum.cpp
         2.add_two_numbers.cpp
+        3.longest_substring_without_repeating_characters.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
