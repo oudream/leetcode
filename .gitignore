@@ -4,3 +4,5 @@
 __pycache__
 /build/*/cmake-*
 CMakeFiles
+algorithms/java/junit-4.7.jar
+algorithms/java/bin
