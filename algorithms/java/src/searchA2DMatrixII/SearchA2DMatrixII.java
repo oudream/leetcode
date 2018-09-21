@@ -1,4 +1,4 @@
-﻿// Source : https://leetcode.com/problems/search-a-2d-matrix-ii/description/
+// Source : https://leetcode.com/problems/search-a-2d-matrix-ii/description/
 // Author : Tianming Cao
 // Date   : 2018-01-27
 /**********************************************************************************
