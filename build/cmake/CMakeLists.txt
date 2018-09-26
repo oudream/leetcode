@@ -15,6 +15,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(LEETCODE VERSION 1.0.1 LANGUAGES CXX C)
 
+set(CMAKE_CXX_STANDARD 11)
+
 ### depend path
 #CMAKE_CURRENT_SOURCE_DIR (current file path)
 if (NOT gs_project_path)
@@ -31,7 +33,7 @@ set(gs_project_3rd_path ${gs_project_path}/cpp/3rd)
 set(gs_leetcode_algorithms_cpp_path ${gs_project_path}/algorithms/cpp)
 
 if (NOT gs_project_deploy_path)
-    set(gs_project_deploy_path ${gs_project_path}/deploy)
+    set(gs_project_deploy_path ${gs_project_path}/build/deploy)
     if (UNIX)
         set(gs_project_output_path_debug ${gs_project_deploy_path}/unix/bin_d)
         set(gs_project_output_path_release ${gs_project_deploy_path}/unix/bin)

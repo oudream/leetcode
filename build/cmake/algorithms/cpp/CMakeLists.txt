@@ -7,9 +7,14 @@ set(gsl_alglorithms_heads
 set(gsl_alglorithms_sources
         global.cpp
         main.cpp
-        1.two_sum.cpp
-        2.add_two_numbers.cpp
-        3.longest_substring_without_repeating_characters.cpp
+#        1.two_sum.cpp
+#        2.add_two_numbers.cpp
+#        3.longest_substring_without_repeating_characters.cpp
+#        4.median_of_two_sorted_arrays.cpp
+#        5.longest_palindromic_substring.cpp
+#        6.zigzag_conversion.cpp
+#        7.reverse_integer.cpp
+        8.string_to_integer_atoi.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)

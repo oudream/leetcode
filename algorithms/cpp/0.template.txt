@@ -1,0 +1,45 @@
+#include "global.h"
+
+using namespace std;
+
+class SolutionLeetcode {
+public:
+    string longestPalindrome(string s) {
+    {
+
+    }
+};
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+
+    }
+};
+
+int test_longestPalindrome1(int argc, const char * argv[])
+{
+    int nums[] = {2, 7, 11, 15};
+    int target = 9;
+
+    // Leetcode
+    SolutionLeetcode solutionLeetcode;
+    vector<int> nums2 (nums, nums + sizeof(nums) / sizeof(int) );
+    vector<int> r = solutionLeetcode.longestPalindrome(nums2, target);
+    fn_print(fn_format("Leetcode.longestPalindrome.return.size=%d, items:", r.size()));
+    for (int i = 0; i < r.size(); ++i)
+    {
+        fn_print(fn_format("%d", r[i]));
+    }
+
+    // oudream
+    Solution solution;
+    vector<int> r2 = solution.longestPalindrome(nums2, target);
+    fn_print(fn_format("oudream.longestPalindrome.return.size=%d, items:", r2.size()));
+    for (int i = 0; i < r2.size(); ++i)
+    {
+        fn_print(fn_format("%d", r2[i]));
+    }
+    return TRUE;
+}
+int fn_test_longestPalindrome1 = fn_add_case("longestPalindrome1", test_longestPalindrome1);
