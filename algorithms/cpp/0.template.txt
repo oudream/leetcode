@@ -43,3 +43,15 @@ int test_longestPalindrome1(int argc, const char * argv[])
     return TRUE;
 }
 int fn_test_longestPalindrome1 = fn_add_case("longestPalindrome1", test_longestPalindrome1);
+
+int test_longestPalindrome1(int argc, const char * argv[])
+{
+    int target = 9;
+
+    // oudream
+    Solution solution;
+    vector<int> r1 = solution.longestPalindrome(target);
+    fn_print(fn_format("oudream.longestPalindrome.return = %d !", r1));
+    return TRUE;
+}
+int fn_test_longestPalindrome1 = fn_add_case("longestPalindrome1", test_longestPalindrome1);

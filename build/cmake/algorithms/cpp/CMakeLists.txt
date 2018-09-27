@@ -14,7 +14,8 @@ set(gsl_alglorithms_sources
 #        5.longest_palindromic_substring.cpp
 #        6.zigzag_conversion.cpp
 #        7.reverse_integer.cpp
-        8.string_to_integer_atoi.cpp
+#        8.string_to_integer_atoi.cpp
+        9.palindrome_number.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)

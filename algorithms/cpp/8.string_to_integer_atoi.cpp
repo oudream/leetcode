@@ -83,7 +83,7 @@ class Solution {
 public:
     int myAtoi(string str)
     {
-        int i, num = 0;
+        int i, r = 0;
         bool bNegative = false;
 
         for (i = 0; isspace(str[i]); i++);
@@ -96,25 +96,25 @@ public:
 
         for (; str[i] && str[i] >= '0' && str[i] <= '9'; i++)
         {
-            int digit = str[i] - '0';
+            int bn = str[i] - '0';
 
             if (bNegative)
             {
-                if (-num < (INT_MIN + digit) / 10)
+                if (-r < (INT_MIN + bn) / 10)
                 {
                     return INT_MIN;
                 }
             }
             else
             {
-                if (num > (INT_MAX - digit) / 10)
+                if (r > (INT_MAX - bn) / 10)
                 {
                     return INT_MAX;
                 }
             }
-            num = num * 10 + str[i] - '0';
+            r = r * 10 + str[i] - '0';
         }
-        return bNegative ? -num : num;
+        return bNegative ? -r : r;
     }
 };
 

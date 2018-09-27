@@ -2,6 +2,19 @@
 #ifndef PROJECT_GLOBAL_H
 #define PROJECT_GLOBAL_H
 
+#include <stddef.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+#include <signal.h>
+#include <ctype.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+#include <errno.h>
+
 #include <typeinfo>
 #include <vector>
 #include <deque>
@@ -16,19 +29,6 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-
-#include <stddef.h>
-#include <string.h>
-#include <math.h>
-#include <time.h>
-#include <signal.h>
-#include <ctype.h>
-#include <wchar.h>
-#include <wctype.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <assert.h>
-#include <errno.h>
 
 #ifndef    TRUE
 #define    TRUE    1
