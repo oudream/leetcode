@@ -1,9 +1,9 @@
 
 
 set(gsl_alglorithms_sources
-        1/1.1.cpp
+#        1/1.1.cpp
 #        2/2.1.cpp
-#        3/3.1.cpp
+        3/3.2.cpp
         )
 
 mc_merge_file_path(${gs_analysis_of_algorithm_path} "${gsl_alglorithms_sources}" gsl_alglorithms_source_filepaths)
