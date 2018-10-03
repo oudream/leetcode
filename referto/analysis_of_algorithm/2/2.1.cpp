@@ -1,6 +1,6 @@
-¸ø¶¨º¬ÓÐ n ¸öÔªËØµÄ¶àÖØ¼¯ºÏ S£¬Ã¿¸öÔªËØÔÚ S ÖÐ³öÏÖµÄ´ÎÊý³ÆÎª¸ÃÔªËØµÄÖØÊý¡£¶àÖØ¼¯SÖÐÖØÊý×î´óµÄÔªËØ³ÆÎªÖÚÊý¡£ÀýÈç£¬S={1,2,2,2,3,5}£¬ÆäÖÚÊýÎª2£¬ÆäÖØÊýÎª3¡£
-ÒªÇó£º¶Ô¸ø¶¨µÄ n ¸ö×ÔÈ»Êý×é³ÉµÄ¶àÖØ¼¯S£¬¼ÆËã S µÄÖÚÊý¼°ÆäÖØÊý¡£
-ÑùÀýÊäÈë£º
+ç»™å®šå«æœ‰ n ä¸ªå…ƒç´ çš„å¤šé‡é›†åˆ Sï¼Œæ¯ä¸ªå…ƒç´ åœ¨ S ä¸­å‡ºçŽ°çš„æ¬¡æ•°ç§°ä¸ºè¯¥å…ƒç´ çš„é‡æ•°ã€‚å¤šé‡é›†Sä¸­é‡æ•°æœ€å¤§çš„å…ƒç´ ç§°ä¸ºä¼—æ•°ã€‚ä¾‹å¦‚ï¼ŒS={1,2,2,2,3,5}ï¼Œå…¶ä¼—æ•°ä¸º2ï¼Œå…¶é‡æ•°ä¸º3ã€‚
+è¦æ±‚ï¼šå¯¹ç»™å®šçš„ n ä¸ªè‡ªç„¶æ•°ç»„æˆçš„å¤šé‡é›†Sï¼Œè®¡ç®— S çš„ä¼—æ•°åŠå…¶é‡æ•°ã€‚
+æ ·ä¾‹è¾“å…¥ï¼š
 	6
 	1
 	2
@@ -8,7 +8,7 @@
 	2
 	3
 	5
-ÑùÀýÊä³ö£º
+æ ·ä¾‹è¾“å‡ºï¼š
 	2
 	3
 
@@ -19,7 +19,7 @@
 #define n 8 
 int num;
 int largest = 1;
-void sort(int a[]){//¶ÔÊý×é½øÐÐÅÅÐò 
+void sort(int a[]){//å¯¹æ•°ç»„è¿›è¡ŒæŽ’åº 
 	int i,j;
 	int temp;
 	for(i = 0;i < n;i ++){
@@ -35,7 +35,7 @@ void sort(int a[]){//¶ÔÊý×é½øÐÐÅÅÐò
 int compute(int a[],int left,int right){
 	int mid = (left + right) / 2;
 	int median = a[mid];
-	int l1,r1;//mid×ó±ßµÄÊý¼ÇÎªl1,midÓÒ±ßµÄÊý¼ÇÎªr1 
+	int l1,r1;//midå·¦è¾¹çš„æ•°è®°ä¸ºl1,midå³è¾¹çš„æ•°è®°ä¸ºr1 
 	l1 = r1 = mid;
 	while(a[l1] == median)
 		l1 --;

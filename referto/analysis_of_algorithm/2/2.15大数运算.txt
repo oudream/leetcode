@@ -5,7 +5,7 @@ int main()
 	int i,j;
 	int num1[100],num2[100],num3[200];
 	int index;
-	int over = 0;//over±íÊ¾Òª½öÎªµÄÊıÖµ 
+	int over = 0;//overè¡¨ç¤ºè¦ä»…ä¸ºçš„æ•°å€¼ 
 	char str1[100],str2[100];
 	int temp;
 	scanf("%s",str1);

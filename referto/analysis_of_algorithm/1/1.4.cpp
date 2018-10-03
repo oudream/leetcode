@@ -1,4 +1,4 @@
-¸ø¶¨ n ¸öÊµÊý£¬ÇóÕân¸öÊµÊýÔÚÊýÖáÉÏÏàÁÚ2¸öÊýÖ®¼äµÄ×î´ó²îÖµ£¬Éè¼Æ½â×î´ó¼äÏ¶ÎÊÌâµÄÏßÐÔÊ±¼äËã·¨¡£
+ç»™å®š n ä¸ªå®žæ•°ï¼Œæ±‚è¿™nä¸ªå®žæ•°åœ¨æ•°è½´ä¸Šç›¸é‚»2ä¸ªæ•°ä¹‹é—´çš„æœ€å¤§å·®å€¼ï¼Œè®¾è®¡è§£æœ€å¤§é—´éš™é—®é¢˜çš„çº¿æ€§æ—¶é—´ç®—æ³•ã€‚
 
 #include<stdio.h>
 #define N 5
@@ -46,14 +46,14 @@ int main()
 			min = number[i];
 		}
 	}
-	//n-2¸öÔªËØ·ÖÅäµ½n-1¸öÍ°ÖÐ
+	//n-2ä¸ªå…ƒç´ åˆ†é…åˆ°n-1ä¸ªæ¡¶ä¸­
 	for(i = 0;i < n - 1;i ++)
 	{
 		count[i] = 0;
 		low[i] = max;
 		high[i] = min;
 	 } 
-	//°ÑÔªËØ·ÖÅäµ½Í°ÖÐ£¬Ö»¶ÔÉÏÏÂ½çºÍ¸öÊý½øÐÐ¸üÐÂ
+	//æŠŠå…ƒç´ åˆ†é…åˆ°æ¡¶ä¸­ï¼Œåªå¯¹ä¸Šä¸‹ç•Œå’Œä¸ªæ•°è¿›è¡Œæ›´æ–°
 	for(i = 0;i < n;i ++){
 		int bucket = (int)((number[i] - min) / ((max - min) / (n - 1)));
 		count[bucket] ++;
@@ -67,7 +67,7 @@ int main()
 			high[bucket] = number[i];
 		}
 	} 
-	//Çó×î´ó¼ä¾à
+	//æ±‚æœ€å¤§é—´è·
 	left = high[0];
 	for(i = 1;i < n - 1;i ++)
 	{

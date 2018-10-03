@@ -5,9 +5,9 @@ Given a set of sticks of various lengths, is it possible to join them end-to-end
 
 #include<stdio.h>
 #define n 8
-#define m 4//Õı·½ĞÎµÄËÄÌõ±ß 
+#define m 4//æ­£æ–¹å½¢çš„å››æ¡è¾¹ 
 int len[n] = {1,8,3,7,5,4,3,5};
-int sum[m] = {0};//ÓÃÓÚ±£´æÃ¿Ò»Ìõ±ßÉÏµÄÄ¾¹÷µÄ³¤¶ÈµÄºÍ 
+int sum[m] = {0};//ç”¨äºä¿å­˜æ¯ä¸€æ¡è¾¹ä¸Šçš„æœ¨æ£çš„é•¿åº¦çš„å’Œ 
 int flag = 0;
 int edge = 0;
 bool ok(){

@@ -68,6 +68,7 @@ include_directories(${gs_project_include_path})
 
 ###lib exe
 add_subdirectory(algorithms)
+add_subdirectory(referto)
 
 message(bging 001)
 #message(MSVC)

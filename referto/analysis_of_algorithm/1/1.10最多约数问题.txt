@@ -1,9 +1,9 @@
-ÕýÕûÊý x µÄÔ¼ÊýÊÇÄÜÕû³ýxµÄÕýÕûÊý£¬ÆäÔ¼ÊýµÄ¸öÊý¼ÇÎªdiv(x)£¬ÀýÈçdiv(10)=4¡£Éè a ºÍ b ÊÇÁ½¸öÕýÕûÊý£¬ÕÒ³ö a ºÍ b Ö®¼äÔ¼Êý¸öÊý×î¶àµÄÊý x µÄÔ¼Êý¸öÊý¡£
-ÑùÀýÊäÈë£º 1 36 
-ÑùÀýÊä³ö£º 9
+æ­£æ•´æ•° x çš„çº¦æ•°æ˜¯èƒ½æ•´é™¤xçš„æ­£æ•´æ•°ï¼Œå…¶çº¦æ•°çš„ä¸ªæ•°è®°ä¸ºdiv(x)ï¼Œä¾‹å¦‚div(10)=4ã€‚è®¾ a å’Œ b æ˜¯ä¸¤ä¸ªæ­£æ•´æ•°ï¼Œæ‰¾å‡º a å’Œ b ä¹‹é—´çº¦æ•°ä¸ªæ•°æœ€å¤šçš„æ•° x çš„çº¦æ•°ä¸ªæ•°ã€‚
+æ ·ä¾‹è¾“å…¥ï¼š 1 36 
+æ ·ä¾‹è¾“å‡ºï¼š 9
 
 #include<stdio.h>
-int prime(int num)//ÅÐ¶ÏÕâ¸öÊýÊÇ²»ÊÇËØÊý
+int prime(int num)//åˆ¤æ–­è¿™ä¸ªæ•°æ˜¯ä¸æ˜¯ç´ æ•°
 {
 	int flag = 1;
 	for(int i = 2;i < num / 2;i ++)

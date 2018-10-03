@@ -2,13 +2,13 @@
 #define n 8
 int a[n][n];
 int count = 1;
-//col,rowÆåÅÆ×óÉÏ½ÇµÄĞĞºÅºÍÁĞºÅ
-//td,tcÌØÊâ·½¸ñµÄĞĞºÅºÍÁĞºÅ 
+//col,rowæ£‹ç‰Œå·¦ä¸Šè§’çš„è¡Œå·å’Œåˆ—å·
+//td,tcç‰¹æ®Šæ–¹æ ¼çš„è¡Œå·å’Œåˆ—å· 
 void checkboard(int col,int row,int td,int tc,int num){
 	if(num == 1){
 		return;
 	}
-	//×óÉÏ 
+	//å·¦ä¸Š 
 	if(td < col + num / 2 && tc < row + num / 2){
 		a[col + num / 2 - 1][row + num / 2] = count;
 		a[col + num / 2][row + num / 2 - 1] = count;
@@ -21,7 +21,7 @@ void checkboard(int col,int row,int td,int tc,int num){
 		checkboard(col + num / 2,row,col + num / 2,row + num / 2 - 1,num / 2);
 		checkboard(col + num / 2,row + num / 2,col + num / 2,row + num / 2,num / 2);
 	}
-	//ÓÒÉÏ 
+	//å³ä¸Š 
 	if(td < col + num / 2 && tc > row + num / 2 - 1){
 		a[col + num / 2 - 1][row + num / 2 - 1] = count;
 		a[col + num / 2][row + num / 2 - 1] = count;
@@ -33,7 +33,7 @@ void checkboard(int col,int row,int td,int tc,int num){
 		checkboard(col + num / 2,row,col + num / 2,row + num / 2 - 1,num / 2);
 		checkboard(col + num / 2,row + num / 2,col + num / 2,row + num / 2,num / 2);
 	}
-	//×óÏÂ 
+	//å·¦ä¸‹ 
 	if(td > col + num / 2 - 1 && tc < row + num / 2){
 		a[col + num / 2 - 1][row + num / 2 - 1] = count;
 		a[col + num / 2 - 1][row + num / 2] = count;
@@ -45,7 +45,7 @@ void checkboard(int col,int row,int td,int tc,int num){
 		checkboard(col + num / 2,row,td,tc,num / 2);
 		checkboard(col + num / 2,row + num / 2,col + num / 2,row + num / 2,num / 2);
 	}
-	//ÓÒÏÂ 
+	//å³ä¸‹ 
 	if(td > col + num / 2 - 1 && tc > row + num / 2 - 1){
 		a[col + num / 2 - 1][row + num / 2 - 1] = count;
 		a[col + num / 2 - 1][row + num / 2] = count;

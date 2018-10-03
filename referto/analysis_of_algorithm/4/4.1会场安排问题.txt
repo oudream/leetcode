@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define n 5
 int finish(int *flag){
-	for(int i = 0;i < n;i ++){//0±íÊ¾Î´°²ÅÅ£¬1±íÊ¾°²ÅÅÁË 
+	for(int i = 0;i < n;i ++){//0è¡¨ç¤ºæœªå®‰æŽ’ï¼Œ1è¡¨ç¤ºå®‰æŽ’äº† 
 		if(flag[i] == 0){
 			return 0;
 		}

@@ -2,9 +2,9 @@
 int main()
 {
 	int i,j;
-	int result[100];//¼ÇÂ¼Êı¾İ
+	int result[100];//è®°å½•æ•°æ®
 	result[0] = 1; 
-	int length = 1;//Ä¿Ç°µÄ³¤¶È 
+	int length = 1;//ç›®å‰çš„é•¿åº¦ 
 	int n;
 	int over;
 	int temp; 

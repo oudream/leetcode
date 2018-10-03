@@ -1,4 +1,4 @@
-//0-1±³°üÎÊÌâ 
+//0-1èƒŒåŒ…é—®é¢˜ 
 #include<stdio.h>
 #define n 3
 int w[n] = {40,5,40};
@@ -11,7 +11,7 @@ void nfs(int m)
 {
 	int i;
 	if(m == n){
-		if(temp > max){//if(temp >= max)ÕâÑù»áÊä³ö×îºóÂú×ãÌõ¼þµÄ£¬Ò²¾ÍÊÇ5 40 
+		if(temp > max){//if(temp >= max)è¿™æ ·ä¼šè¾“å‡ºæœ€åŽæ»¡è¶³æ¡ä»¶çš„ï¼Œä¹Ÿå°±æ˜¯5 40 
 			max = temp;
 			for(i = 0;i < n;i ++){
 				best[i] = flag[i];
@@ -19,7 +19,7 @@ void nfs(int m)
 		}
 		return;
 	}
-	if(temp + rest > max){//restÊÇÊ£ÓàµÄËùÓÐÃ»¼ÓµÄ£¬Èç¹ûtemp + rest <= maxµÄ»°£¬¿ÉÒÔÌáÇ°½áÊøµ±Ç°·ÖÖ§ 
+	if(temp + rest > max){//restæ˜¯å‰©ä½™çš„æ‰€æœ‰æ²¡åŠ çš„ï¼Œå¦‚æžœtemp + rest <= maxçš„è¯ï¼Œå¯ä»¥æå‰ç»“æŸå½“å‰åˆ†æ”¯ 
 		if(temp + w[m] <= c){
 			temp += w[m];
 			flag[m] = 1;

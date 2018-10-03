@@ -1,4 +1,4 @@
-//����һ���ݻ�Ϊc�ı�����ȥ����װn������Ϊwi����ֵΪvi�����壬����װ�µ����������ֵ�� 
+//给定一个容积为c的背包，去尝试装n个重量为wi、价值为vi的物体，求能装下的物体的最大价值。 
 #include<stdio.h>  
 #include<math.h>
 #define n 5

@@ -1,4 +1,4 @@
-//×Ó¼¯ºÍÎÊÌâ
+//å­é›†å’Œé—®é¢˜
 #include<stdio.h>
 #define n 5
 #define c 10

@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define n 6//¾ØÕóµÄÊıÁ¿ 
+#define n 6//çŸ©é˜µçš„æ•°é‡ 
 int **s;
 int recurMatrix(int *p,int i,int j)
 {
@@ -30,7 +30,7 @@ void traceback(int i,int j,int **s)
 int main()
 {
 	int i,j;
-	int p[n + 1] = {30,35,15,5,10,20,25};//6¸ö¾ØÕóĞèÒª7¸ö¿Õ¼ä´æ´¢¾ØÕóÖĞËùÓĞµÄÊı¾İ 
+	int p[n + 1] = {30,35,15,5,10,20,25};//6ä¸ªçŸ©é˜µéœ€è¦7ä¸ªç©ºé—´å­˜å‚¨çŸ©é˜µä¸­æ‰€æœ‰çš„æ•°æ® 
 	s = new int *[n + 1];
 	
 	for(i = 0;i <= n;i ++){

@@ -2,8 +2,8 @@
 #define N 9
 void merge(int a[],int b[],int left,int mid,int right)
 {
-	//ºÏ²¢ÅÅĞò£¬i=leftÒ²¾ÍÊÇ´ÓÊı×éµÄ×î×ó±ß³ö·¢£¬j´ÓÊı×éÓÒ°ë²¿·İµÄ×î×ó±ß³ö·¢ 
-	int i = left,j = mid + 1,index = left;//index×÷ÎªbÊı×éµÄÏÂ±ê 
+	//åˆå¹¶æ’åºï¼Œi=leftä¹Ÿå°±æ˜¯ä»æ•°ç»„çš„æœ€å·¦è¾¹å‡ºå‘ï¼Œjä»æ•°ç»„å³åŠéƒ¨ä»½çš„æœ€å·¦è¾¹å‡ºå‘ 
+	int i = left,j = mid + 1,index = left;//indexä½œä¸ºbæ•°ç»„çš„ä¸‹æ ‡ 
 	while(i <= mid && j <= right){
 		if(a[i] < a[j]) 
 		{
@@ -17,7 +17,7 @@ void merge(int a[],int b[],int left,int mid,int right)
 			j ++;
 		}
 	}
-	//¼«¶ËÇé¿ö 
+	//æç«¯æƒ…å†µ 
 	if(i > mid)
 	{
 		for(int q = j;q <= right;q ++)

@@ -1,6 +1,6 @@
-¸ø¶¨Ò»±¾Êé£¬ÆäÖĞ°üº¬nÒ³£¬¼ÆËã³öÊéµÄÈ«²¿Ò³ÂëÖĞÓÃµ½ÁË¶àÉÙ¸öÊı×Ö0¡­9¡£
+ç»™å®šä¸€æœ¬ä¹¦ï¼Œå…¶ä¸­åŒ…å«né¡µï¼Œè®¡ç®—å‡ºä¹¦çš„å…¨éƒ¨é¡µç ä¸­ç”¨åˆ°äº†å¤šå°‘ä¸ªæ•°å­—0â€¦9ã€‚
 144 255 255 255 251 245 244 190 144 144
-//·½·¨Ò»
+//æ–¹æ³•ä¸€
 #include<stdio.h>  
 #include<math.h>
 int main()  
@@ -12,20 +12,20 @@ int main()
 	int count[10] = {0};
 	temp = n;
 	len = log10(n);
-	//´Ó000~745£¬Ëã³ö0~9Ã¿¸öÊı×ÖËùÓÃµÄ´ÎÊı 
+	//ä»000~745ï¼Œç®—å‡º0~9æ¯ä¸ªæ•°å­—æ‰€ç”¨çš„æ¬¡æ•° 
 	for(i = 0;i <= len;i ++){
-		higher = temp / pow(10,len - i); //¸ßÎ» 
-		rest = temp % (int)pow(10,len - i);//³ıÁË¸ßÎ»Ê£ÓàµÄ²¿·Ö 
-		count[higher] = count[higher] + rest + 1;//ÏÈËã³ö×î¸ßµÄÎ»×î´óµÄÄÇ¸öÊıÓÃµ½µÄ´ÎÊı£¬745µÄ»°¾ÍÊÇ7 
+		higher = temp / pow(10,len - i); //é«˜ä½ 
+		rest = temp % (int)pow(10,len - i);//é™¤äº†é«˜ä½å‰©ä½™çš„éƒ¨åˆ† 
+		count[higher] = count[higher] + rest + 1;//å…ˆç®—å‡ºæœ€é«˜çš„ä½æœ€å¤§çš„é‚£ä¸ªæ•°ç”¨åˆ°çš„æ¬¡æ•°ï¼Œ745çš„è¯å°±æ˜¯7 
 		for(j = 0;j < higher;j ++){
-			count[j] = count[j] + pow(10,len - i);//0~6ËùÓÃµ½µÄ´ÎÊı 
+			count[j] = count[j] + pow(10,len - i);//0~6æ‰€ç”¨åˆ°çš„æ¬¡æ•° 
 			for(k = 0;k < 10;k ++){
-				count[k] = count[k] + (len - i) * pow(10,len - i - 1);//00~99ËùÓÃµ½µÄ´ÎÊı 
+				count[k] = count[k] + (len - i) * pow(10,len - i - 1);//00~99æ‰€ç”¨åˆ°çš„æ¬¡æ•° 
 			} 
 		} 
 		temp = rest;
 	}
-	//È¥µô¶àÓàµÄ0 
+	//å»æ‰å¤šä½™çš„0 
 	for(i = 0;i <= len;i ++){
 		count[0] = count[0] - pow(10,len - i);
 	}		
@@ -35,12 +35,12 @@ int main()
 	putchar('\n');
 	return 0;
 } 
-//·½·¨¶ş
+//æ–¹æ³•äºŒ
 #include<stdio.h>  
 #include<math.h>
 int main()  
 {
-	int n = 745;//¼ÙÉèÊÇ745Ò³µÄÊı 
+	int n = 745;//å‡è®¾æ˜¯745é¡µçš„æ•° 
 	int i,j;
 	int count[10] = {0};
 	int len;
@@ -60,7 +60,7 @@ int main()
 			count[j] = count[j] + high *  pow(10,len - i);
 		}
 	}	 
-	//È¥µô¶àÓàµÄ0 
+	//å»æ‰å¤šä½™çš„0 
 	for(i = 0;i <= len;i ++){
 		count[0] = count[0] - pow(10,len - i);
 	}		
