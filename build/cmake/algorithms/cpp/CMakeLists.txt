@@ -32,3 +32,31 @@ mc_target_link_libraries(leetcode_algorithms)
 #set_target_properties(leetcode_algorithms PROPERTIES FOLDER algorithms)
 
 #mc_build_with_cc_static()
+
+
+
+#############################################
+
+
+
+set(gsl_test_kmp1_heads
+        global.h
+        )
+
+set(gsl_test_kmp1_sources
+        global.cpp
+        test_kmp1.cpp
+        )
+
+mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_kmp1_heads}" gsl_test_kmp1_head_filepaths)
+mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_kmp1_sources}" gsl_test_kmp1_source_filepaths)
+
+source_group("algorithms" FILES ${gsl_test_kmp1_head_filepaths} ${gsl_test_kmp1_source_filepaths})
+
+add_executable(test_kmp1
+        ${gsl_test_kmp1_head_filepaths} ${gsl_test_kmp1_source_filepaths}
+        )
+
+
+
+
