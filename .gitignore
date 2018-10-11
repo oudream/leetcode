@@ -3,6 +3,7 @@
 .idea
 __pycache__
 /build/*/cmake-*
+/build/deploy
 CMakeFiles
 algorithms/java/junit-4.7.jar
 algorithms/java/bin
