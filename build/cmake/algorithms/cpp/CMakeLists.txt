@@ -58,106 +58,6 @@ macro(mc_create_test1 sCppName)
             )
 endmacro()
 
-#############################################
-
-set(gsl_test_kmp1_heads
-        global.h
-        )
-
-set(gsl_test_kmp1_sources
-        global.cpp
-        test_kmp1.cpp
-        )
-
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_kmp1_heads}" gsl_test_kmp1_head_filepaths)
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_kmp1_sources}" gsl_test_kmp1_source_filepaths)
-
-source_group("algorithms" FILES ${gsl_test_kmp1_head_filepaths} ${gsl_test_kmp1_source_filepaths})
-
-add_executable(test_kmp1
-        ${gsl_test_kmp1_head_filepaths} ${gsl_test_kmp1_source_filepaths}
-        )
-
-#############################################
-
-set(gsl_test_divide_two_int1_heads
-        global.h
-        )
-
-set(gsl_test_divide_two_int1_sources
-        global.cpp
-        test_divide_two_int1.cpp
-        )
-
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_divide_two_int1_heads}" gsl_test_divide_two_int1_head_filepaths)
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_divide_two_int1_sources}" gsl_test_divide_two_int1_source_filepaths)
-
-source_group("algorithms" FILES ${gsl_test_divide_two_int1_head_filepaths} ${gsl_test_divide_two_int1_source_filepaths})
-
-add_executable(test_divide_two_int1
-        ${gsl_test_divide_two_int1_head_filepaths} ${gsl_test_divide_two_int1_source_filepaths}
-        )
-
-#############################################
-
-set(gsl_test_combination_loop1_heads
-        global.h
-        )
-
-set(gsl_test_combination_loop1_sources
-        global.cpp
-        test_combination_loop1.cpp
-        )
-
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_loop1_heads}" gsl_test_combination_loop1_head_filepaths)
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_loop1_sources}" gsl_test_combination_loop1_source_filepaths)
-
-source_group("algorithms" FILES ${gsl_test_combination_loop1_head_filepaths} ${gsl_test_combination_loop1_source_filepaths})
-
-add_executable(test_combination_loop1
-        ${gsl_test_combination_loop1_head_filepaths} ${gsl_test_combination_loop1_source_filepaths}
-        )
-
-#############################################
-
-set(gsl_test_combination_loop2_heads
-        global.h
-        )
-
-set(gsl_test_combination_loop2_sources
-        global.cpp
-        test_combination_loop2.cpp
-        )
-
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_loop2_heads}" gsl_test_combination_loop2_head_filepaths)
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_loop2_sources}" gsl_test_combination_loop2_source_filepaths)
-
-source_group("algorithms" FILES ${gsl_test_combination_loop2_head_filepaths} ${gsl_test_combination_loop2_source_filepaths})
-
-add_executable(test_combination_loop2
-        ${gsl_test_combination_loop2_head_filepaths} ${gsl_test_combination_loop2_source_filepaths}
-        )
-
-#############################################
-
-set(gsl_test_combination_recursion1_heads
-        global.h
-        )
-
-set(gsl_test_combination_recursion1_sources
-        global.cpp
-        test_combination_recursion1.cpp
-        )
-
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_recursion1_heads}" gsl_test_combination_recursion1_head_filepaths)
-mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_test_combination_recursion1_sources}" gsl_test_combination_recursion1_source_filepaths)
-
-source_group("algorithms" FILES ${gsl_test_combination_recursion1_head_filepaths} ${gsl_test_combination_recursion1_source_filepaths})
-
-add_executable(test_combination_recursion1
-        ${gsl_test_combination_recursion1_head_filepaths} ${gsl_test_combination_recursion1_source_filepaths}
-        )
-
 #set(v_name1 "ou")
 #set(v_name2 "dream")
 #set(${v_name1}${v_name2} "ouyangjinhong")
@@ -166,4 +66,11 @@ add_executable(test_combination_recursion1
 
 #############################################
 
+mc_create_test1(kmp1)
+mc_create_test1(divide_two_int1)
+mc_create_test1(combination_loop1)
+mc_create_test1(combination_loop2)
+mc_create_test1(combination_recursion1)
 mc_create_test1(combination_recursion2)
+mc_create_test1(combination_recursion3)
+mc_create_test1(combination_recursion4)

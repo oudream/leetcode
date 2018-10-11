@@ -71,7 +71,7 @@ int main()
     do
         for (int i = 0; i < k; coutCount((++i < k) ? ',' : '\n'))
             cout << comb[i] + 1;
-    while (next_comb(comb, n, k));
+    while (next_comb2(comb, n, k));
     delete[] comb;
     return 0;
 }
