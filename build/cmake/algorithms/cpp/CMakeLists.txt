@@ -17,7 +17,8 @@ set(gsl_alglorithms_sources
 #        8.string_to_integer_atoi.cpp
 #        9.palindrome_number.cpp
 #        11.container_with_most_water.cpp
-        20.valid_parentheses.cpp
+#        20.valid_parentheses.cpp
+        22.generate_parentheses.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
@@ -74,3 +75,31 @@ mc_create_test1(combination_recursion1)
 mc_create_test1(combination_recursion2)
 mc_create_test1(combination_recursion3)
 mc_create_test1(combination_recursion4)
+mc_create_test1(hannoi1)
+
+
+#############################################
+
+macro(mc_create_tool1 sCppName)
+    set(gsl_tool_${sCppName}_heads
+            global.h
+            )
+
+    set(gsl_tool_${sCppName}_sources
+            global.cpp
+            tool_${sCppName}.cpp
+            )
+
+    mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_tool_${sCppName}_heads}" gsl_tool_${sCppName}_head_filepaths)
+    mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_tool_${sCppName}_sources}" gsl_tool_${sCppName}_source_filepaths)
+
+    source_group("algorithms" FILES ${gsl_tool_${sCppName}_head_filepaths} ${gsl_tool_${sCppName}_source_filepaths})
+
+    add_executable(tool_${sCppName}
+            ${gsl_tool_${sCppName}_head_filepaths} ${gsl_tool_${sCppName}_source_filepaths}
+            )
+endmacro()
+
+#############################################
+
+mc_create_tool1(create_tree1)
