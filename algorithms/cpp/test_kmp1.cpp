@@ -3,6 +3,12 @@
 
 using namespace std;
 
+
+int fn_add_case(const std::string & sCaseName , fn_case_t fn)
+{
+    return TRUE;
+}
+
 int iCount = 0;
 
 void cal_next( char * str, int * next, int len ) {
@@ -43,10 +49,6 @@ int KMP( char * str, int slen, char * ptr, int plen, int * next ) {
     return ( p_i == plen ) ? ( s_i - plen ) : -1;
 }
 
-int fn_add_case(const std::string & sCaseName , fn_case_t fn)
-{
-    return TRUE;
-}
 
 int main(int argc, const char * argv[])
 {

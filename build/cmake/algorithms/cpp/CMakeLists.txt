@@ -18,7 +18,10 @@ set(gsl_alglorithms_sources
 #        9.palindrome_number.cpp
 #        11.container_with_most_water.cpp
 #        20.valid_parentheses.cpp
-        22.generate_parentheses.cpp
+#        22.generate_parentheses.cpp
+#        26.remove_duplicates_from_sorted_array.cpp
+#        27.remove_element.cpp
+        896.monotonic_array.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
@@ -76,6 +79,8 @@ mc_create_test1(combination_recursion2)
 mc_create_test1(combination_recursion3)
 mc_create_test1(combination_recursion4)
 mc_create_test1(hannoi1)
+mc_create_test1(encoder_lzw1)
+mc_create_test1(2-3tree1)
 
 
 #############################################
