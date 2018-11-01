@@ -8,6 +8,7 @@ int fn_add_case(const std::string & sCaseName , fn_case_t fn)
     return TRUE;
 }
 
+
 /*-------------------------two3 Tree's Node-------------------------*/
 template <class T>
 struct two3node
@@ -48,7 +49,7 @@ struct usefulData
 
 
     //Overloaded Assignment Operator
-    usefulData<T> operator = (usefulData<T> & otherusefulData)
+    usefulData& operator= (const usefulData & otherusefulData)
     {
         if (&otherusefulData != this)
         {
@@ -60,11 +61,12 @@ struct usefulData
     }
 
     //Copy Constructor
-    usefulData(usefulData<T> & otherusefulData)
+    usefulData(const usefulData & otherusefulData)
     {
         child = otherusefulData.child;
         midValue = otherusefulData.midValue;
     }
+
 };
 
 
