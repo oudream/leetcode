@@ -8,9 +8,6 @@ int fn_add_case(const std::string & sCaseName , fn_case_t fn)
     return TRUE;
 }
 
-
-
-
 /*-------------------------two3 Tree's Node-------------------------*/
 template <class T>
 struct two3node
@@ -50,18 +47,17 @@ struct usefulData
     }
 
 
-//    //Overloaded Assignment Operator
-//    usefulData<T> &operator = (usefulData<T> & otherusefulData)
-//    {
-//        if (&otherusefulData != this)
-//        {
-//            child    = otherusefulData.child;
-//            midValue = otherusefulData.midValue;
-//        }
-//
-//        return *this;
-//    }
+    //Overloaded Assignment Operator
+    usefulData<T> operator = (usefulData<T> & otherusefulData)
+    {
+        if (&otherusefulData != this)
+        {
+            child    = otherusefulData.child;
+            midValue = otherusefulData.midValue;
+        }
 
+        return *this;
+    }
 
     //Copy Constructor
     usefulData(usefulData<T> & otherusefulData)
@@ -79,6 +75,7 @@ struct usefulData
 template <class T>
 class two3Tree
 {
+
 private:
     two3node<T> * root;
 
@@ -330,8 +327,7 @@ public:
             }
         }
 
-        usefulData<T> re(nullptr);
-        return re;
+        return (NULL);
     }
 
 
@@ -446,12 +442,47 @@ public:
             }
         }
 
-        usefulData<T> re(nullptr);
-        return re;
+        return (NULL);
     }
 
 
     /*--------------------------Insertion Function---------------------*/
+
+
+    //Main Insert Function
+    //Wrapper Function
+    bool insert(T d)
+    {
+        T temp = searchFor(d);
+
+        if (temp != d)
+        {
+            two3node<T>* p = root;                  //Parent Pointer (Will be used for rotation purposes)
+
+            usefulData<T> s1 = insert(root, d, p);
+
+            if (s1.child != NULL)               //The case when the result of the split reaches the root and root itself is to be splitted
+            {
+                two3node<T> * temp = new two3node<T>;
+
+                temp -> k1 = s1.midValue;
+                temp -> n  = 1;
+
+                temp -> left = root;
+                temp -> middle  = s1.child;
+
+                temp -> right = NULL;
+                root = temp;
+            }
+
+            return true;
+        }
+
+        else
+            cout << "\nThe current item is already present.\n";
+
+        return false;
+    }
 
 
 
@@ -469,8 +500,7 @@ public:
             temp -> n = 1;
             r = temp;
 
-            usefulData<T> re(nullptr);
-            return re;
+            return (NULL);
         }
 
 
@@ -491,8 +521,7 @@ public:
 
                 r -> n = 2;
 
-                usefulData<T> re(nullptr);
-                return re;
+                return (NULL);
             }
 
 
@@ -526,7 +555,7 @@ public:
             {
                 if (d < r -> k1)
                 {
-                    usefulData<T> s1; insert (r -> left, d, r);
+                    usefulData<T> s1 = insert (r -> left, d, r);
 
                     //Because parents par splitting ka result pass on hota hai
                     if (s1.child != nullptr)
@@ -544,7 +573,7 @@ public:
 
                 else if (d > r -> k1)
                 {
-                    usefulData<T> s1; insert (r -> middle, d, r);
+                    usefulData<T> s1 = insert (r -> middle, d, r);
 
                     //Because parents par splitting ka result pass on hota hai
                     if (s1.child != NULL)
@@ -558,8 +587,7 @@ public:
                     }
                 }
 
-                usefulData<T> re(nullptr);
-                return re;
+                return (NULL);
             }
 
 
@@ -598,48 +626,13 @@ public:
                     return s1;
                 }
 
-                usefulData<T> re(nullptr);
-                return re;
+                return (NULL);
             }
         }
 
     }
 
 
-    //Main Insert Function
-    //Wrapper Function
-    bool insert(T d)
-    {
-        T temp = searchFor(d);
-
-        if (temp != d)
-        {
-            two3node<T>* p = root;                  //Parent Pointer (Will be used for rotation purposes)
-
-            usefulData<T> s1 ; insert(root, d, p);
-
-            if (s1.child != NULL)               //The case when the result of the split reaches the root and root itself is to be splitted
-            {
-                two3node<T> * temp = new two3node<T>;
-
-                temp -> k1 = s1.midValue;
-                temp -> n  = 1;
-
-                temp -> left = root;
-                temp -> middle  = s1.child;
-
-                temp -> right = NULL;
-                root = temp;
-            }
-
-            return true;
-        }
-
-        else
-            cout << "\nThe current item is already present.\n";
-
-        return false;
-    }
 
 
     usefulData<T> split3node (two3node<T>* current, T k, two3node<T>* child)
@@ -781,8 +774,7 @@ public:
         r = NULL;
 
 
-        usefulData<T> re(child);
-        return re;
+        return (child);
     }
 
 
@@ -865,8 +857,7 @@ public:
 
                     r    = root;
 
-                    usefulData<T> re(nullptr);
-                    return re;
+                    return (NULL);
                 }
 
 
@@ -1008,10 +999,10 @@ public:
 
 
                 if (e == 1)
-                    s1 = rotateRight(p,r,s1.midValue,NULL);            //MidValue is just a dummy here. Used to complete the parameter list
+                    s1 =  rotateRight(p,r,s1.midValue,NULL);            //MidValue is just a dummy here. Used to complete the parameter list
 
                 else if (e == 2)
-                    s1 = rotateLeft(p,r,s1.midValue,NULL);
+                    s1 =  rotateLeft(p,r,s1.midValue,NULL);
 
                 else
                     s1 = merge(p,r,NULL);                 //Merging is to be done if the rotation didn't work
@@ -1024,8 +1015,7 @@ public:
         else
             cout << "\nThe tree is already empty.";
 
-        usefulData<T> re(nullptr);
-        return re;
+        return (NULL);
     }
 
 
