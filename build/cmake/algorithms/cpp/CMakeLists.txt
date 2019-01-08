@@ -10,7 +10,7 @@ set(gsl_alglorithms_sources
 #        1.two_sum.cpp
 #        2.add_two_numbers.cpp
 #        3.longest_substring_without_repeating_characters.cpp
-#        4.median_of_two_sorted_arrays.cpp
+        4.median_of_two_sorted_arrays.cpp
 #        5.longest_palindromic_substring.cpp
 #        6.zigzag_conversion.cpp
 #        7.reverse_integer.cpp
@@ -21,7 +21,7 @@ set(gsl_alglorithms_sources
 #        22.generate_parentheses.cpp
 #        26.remove_duplicates_from_sorted_array.cpp
 #        27.remove_element.cpp
-        896.monotonic_array.cpp
+#        896.monotonic_array.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
@@ -81,6 +81,13 @@ mc_create_test1(combination_recursion4)
 mc_create_test1(hannoi1)
 mc_create_test1(encoder_lzw1)
 mc_create_test1(2-3tree1)
+mc_create_test1(number_regular1)
+mc_create_test1(number_sort1)
+mc_create_test1(number_search1)
+mc_create_test1(minimum_tree1)
+mc_create_test1(knapsack_dp1)
+mc_create_test1(knapsack_recursion1)
+mc_create_test1(knapsack_fractional1)
 
 
 #############################################

@@ -1,3 +1,5 @@
+// https://rosettacode.org/wiki/LZW_compression
+
 #include "global.h"
 
 using namespace std;

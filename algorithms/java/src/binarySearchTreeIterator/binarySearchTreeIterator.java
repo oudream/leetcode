@@ -17,6 +17,7 @@
 
 package binarySearchTreeIterator;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 /**

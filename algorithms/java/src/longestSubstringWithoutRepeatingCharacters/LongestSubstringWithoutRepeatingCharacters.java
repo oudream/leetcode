@@ -3,7 +3,7 @@ package longestSubstringWithoutRepeatingCharacters;
 import java.util.*;
 
 public class LongestSubstringWithoutRepeatingCharacters {
-    public static int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring1(String s) {
         int n = s.length();
         Set<Character> set = new HashSet<>();
         int ans = 0, i = 0, j = 0;
@@ -16,6 +16,20 @@ public class LongestSubstringWithoutRepeatingCharacters {
             else {
                 set.remove(s.charAt(i++));
             }
+        }
+        return ans;
+    }
+
+    public static int lengthOfLongestSubstring(String s) {
+        int n = s.length(), ans = 0;
+        Map<Character, Integer> map = new HashMap<>(); // current index of character
+        // try to extend the range [i, j]
+        for (int j = 0, i = 0; j < n; j++) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            ans = Math.max(ans, j - i + 1);
+            map.put(s.charAt(j), j + 1);
         }
         return ans;
     }
