@@ -12,7 +12,7 @@ struct Item
 };
 
 // maximum weight of the beg
-const int max_weight = 45;
+const int max_weight = 10;
 
 // static integer variables for traverse
 static int index, weight;
@@ -25,7 +25,7 @@ int _01_knapsack_dp(struct Item items[], int length);
 int main()
 {
     // create an array of items and find out the length of the array
-    struct Item items[] = {{60,30},{50,10},{100,25},{60,15}};
+    struct Item items[] = {{3,2},{4,3},{5,4},{6,5},{7,6}};
     int length = sizeof(items)/sizeof(items[0]);
 
     // print out the result by calling 0-1 Knapsack function

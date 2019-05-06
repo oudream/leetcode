@@ -10,18 +10,23 @@ set(gsl_alglorithms_sources
 #        1.two_sum.cpp
 #        2.add_two_numbers.cpp
 #        3.longest_substring_without_repeating_characters.cpp
-        4.median_of_two_sorted_arrays.cpp
+#        4.median_of_two_sorted_arrays.cpp
 #        5.longest_palindromic_substring.cpp
 #        6.zigzag_conversion.cpp
 #        7.reverse_integer.cpp
 #        8.string_to_integer_atoi.cpp
 #        9.palindrome_number.cpp
+#        10.regular_expression_matching1.cpp
 #        11.container_with_most_water.cpp
+#        12.integer_to_roman1.cpp
+#        13.roman_to_integer1.cpp
 #        20.valid_parentheses.cpp
 #        22.generate_parentheses.cpp
 #        26.remove_duplicates_from_sorted_array.cpp
 #        27.remove_element.cpp
+        146.lru_cache.cpp
 #        896.monotonic_array.cpp
+#        969.pancake_sorting.cpp
         )
 
 mc_merge_file_path(${gs_leetcode_algorithms_cpp_path} "${gsl_alglorithms_heads}" gsl_alglorithms_head_filepaths)
@@ -88,6 +93,7 @@ mc_create_test1(minimum_tree1)
 mc_create_test1(knapsack_dp1)
 mc_create_test1(knapsack_recursion1)
 mc_create_test1(knapsack_fractional1)
+mc_create_test1(24game1)
 
 
 #############################################
