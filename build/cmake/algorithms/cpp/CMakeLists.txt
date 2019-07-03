@@ -75,7 +75,6 @@ endmacro()
 
 #############################################
 
-mc_create_test1(kmp1)
 mc_create_test1(divide_two_int1)
 mc_create_test1(combination_loop1)
 mc_create_test1(combination_loop2)
@@ -94,6 +93,8 @@ mc_create_test1(knapsack_dp1)
 mc_create_test1(knapsack_recursion1)
 mc_create_test1(knapsack_fractional1)
 mc_create_test1(24game1)
+mc_create_test1(kmp1)
+mc_create_test1(regex1)
 
 
 #############################################
